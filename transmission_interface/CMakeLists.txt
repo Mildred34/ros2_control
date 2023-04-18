@@ -25,7 +25,11 @@ add_library(${PROJECT_NAME} SHARED
   src/simple_transmission_loader.cpp
   src/four_bar_linkage_transmission_loader.cpp
   src/differential_transmission_loader.cpp
+  # src/underactuated_transmission_loader.cpp
+  src/abduction_transmission_loader.cpp 
+  # src/finger_transmission_loader.cpp
 )
+
 target_include_directories(${PROJECT_NAME} PUBLIC include)
 ament_target_dependencies(${PROJECT_NAME} ${THIS_PACKAGE_INCLUDE_DEPENDS})
 

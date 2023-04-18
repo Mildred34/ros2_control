@@ -252,6 +252,7 @@ inline void FourBarLinkageTransmission::actuator_to_joint()
   // position
   auto & act_pos = actuator_position_;
   auto & joint_pos = joint_position_;
+
   if (act_pos.size() == num_actuators() && joint_pos.size() == num_joints())
   {
     assert(act_pos[0] && act_pos[1] && joint_pos[0] && joint_pos[1]);
@@ -285,6 +286,7 @@ inline void FourBarLinkageTransmission::actuator_to_joint()
     joint_eff[1].set_value(
       jr[1] * (act_eff[1].get_value() * ar[1] - act_eff[0].get_value() * ar[0] * jr[0]));
   }
+  
 }
 
 inline void FourBarLinkageTransmission::joint_to_actuator()
