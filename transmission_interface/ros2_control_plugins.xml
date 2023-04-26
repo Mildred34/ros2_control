@@ -23,4 +23,13 @@
       Load configuration of a four bar linkage transmission from a URDF description.
     </description>
   </class>
+
+  <class name="transmission_interface/AbductionTransmission"
+         type="transmission_interface::AbductionTransmissionLoader"
+         base_class_type="transmission_interface::TransmissionLoader">
+    <description>
+      Load configuration of a simple abduction transmission from a URDF description.
+    </description>
+  </class>
+
 </library>
